@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
 <title>Costura Viva Atelier | Ropita artesanal para mascotas</title>
 <meta name="description" content="Costura Viva Atelier: ropita artesanal para perros y mascotas, hecha a mano. Pídela por WhatsApp. #amorqueseviste">
 <meta name="theme-color" content="#fbf3e6">
@@ -23,7 +23,7 @@ body{font-family:var(--sans);background:var(--cream);color:var(--plum);line-heig
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(251,243,230,.9);backdrop-filter:blur(10px);z-index:60}
 ::selection{background:var(--pink);color:var(--plum)}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance;letter-spacing:-.02em;line-height:1.02}
 p{text-wrap:pretty}
 em{font-style:italic}
@@ -217,6 +217,43 @@ footer .brand small{color:rgba(251,243,230,.7)}
   html{scroll-behavior:auto}
   .fade,.tick-t,.ring{animation:none!important}
   .rv{opacity:1;transform:none;transition:none}
+}
+/* Corrección móvil: los hijos de una grilla no deben ensanchar la página; las fotos no se estiran */
+.hero-grid>*,.cita>*,.contact>*,.fgrid>*,.cards>*,.steps>*,.gal>*,.book>*{min-width:0}
+.days{max-width:100%}
+.tick{contain:paint}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (max-width:600px){
+  .wrap{width:min(1180px,100% - 32px)}
+  .bar{height:66px}.brand img{width:42px;height:42px}.brand b{font-size:1.12rem}
+  section{padding:64px 0}
+  .hero{padding-top:28px!important;padding-bottom:56px}.hero-grid{gap:34px}
+  h1{margin-top:16px;font-size:clamp(2.3rem,11.5vw,3.2rem);line-height:1}
+  .lead{margin-top:18px;font-size:1.02rem}
+  .cta{margin-top:26px}.cta .btn,.row .btn,.igband .btn,.gal-cta .btn{width:100%}
+  .btn{padding:14px 22px}
+  .tagline{margin-top:22px;font-size:1.1rem}
+  .art{width:min(330px,94%)}
+  .ph.b{display:none}
+  .art .seal{width:27%}
+  .sticker{left:0;top:6%;padding:7px 14px;font-size:.85rem}
+  .tick{padding:12px 0}.tick-t span{gap:16px;padding-right:16px;font-size:1.15rem}
+  h2{font-size:clamp(2rem,9.4vw,2.6rem)}
+  .eyebrow{font-size:.72rem}
+  .cards{margin-top:36px;gap:18px}
+  .card{padding:28px 24px;border-radius:34px 34px 34px 10px}.card svg{margin-bottom:26px}.card h3{font-size:1.6rem}
+  .gal{margin-top:36px;gap:14px}
+  .gal img{border-radius:20px;box-shadow:5px 5px 0 var(--pink)}.gal img:nth-child(even){box-shadow:5px 5px 0 var(--lime)}
+  .steps{margin-top:44px;gap:38px}.stp h3{font-size:1.4rem}
+  .cita{margin-top:36px;gap:24px}
+  .hor,.book,.panel{border-radius:28px}.hor{padding:26px 22px}.hor h3{font-size:1.55rem}
+  .day{min-width:66px}.slots{grid-template-columns:repeat(3,1fr);gap:8px}.slot{padding:11px 2px;font-size:.8rem}
+  .faq{margin-top:32px}.faq summary{padding:20px 0;gap:14px;font-size:1.12rem}.faq summary::after{width:36px;height:36px}
+  .igband{padding:56px 0}
+  .contact{margin-top:36px;gap:34px}.panel{padding:26px 20px}
+  .tel{font-size:clamp(2.1rem,11vw,2.7rem)}.tel2{font-size:clamp(1.6rem,8vw,2rem)}
+  .soc{margin-top:24px}
+  .fbot{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
